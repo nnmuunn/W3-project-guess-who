@@ -1,7 +1,12 @@
 // All the DOM selectors stored as short variables
-const board = document.getElementById('board')
-const questions = document.getElementById('questions')
-const restartButton = document.getElementById('restart')
+const board = document.getElementById('board');
+const questions = document.getElementById('questions');
+const restartButton = document.getElementById('restart');
+const findOutButton = document.getElementById('filter');
+const playAgainButton = document.getElementById('playAgain')
+const guessCounter = document.getElementById('guess-counter');
+const winOrLoseBoard = document.getElementById('winOrlose')
+const winOrLoseText = document.getElementById('winOrLoseText')
 
 // Array with all the characters, as objects
 const CHARACTERS = [
@@ -204,6 +209,7 @@ const CHARACTERS = [
 let secret
 let currentQuestion
 let charactersInPlay
+let numberOfGuesses = 0
 
 // Draw the game board
 const generateBoard = () => {
